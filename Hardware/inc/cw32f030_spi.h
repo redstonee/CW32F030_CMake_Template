@@ -1,17 +1,17 @@
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -30,32 +30,32 @@
  ******************************************************************************/
 typedef struct
 {
-  uint16_t SPI_Direction;              /*!< ����ͨ��ģʽ��ȫ˫���������������������գ����߰�˫�� 
-                                            ����ȡֵ @ref SPI_Data_Direction */
+  uint16_t SPI_Direction;              /*!< 数据通信模式：全双工，单工单发，单工单收，单线半双工 
+                                            参数取值 @ref SPI_Data_Direction */
 
-  uint16_t SPI_Mode;                   /*!< SPI����ģʽ
-                                            ����ȡֵ @ref SPI_Mode */
+  uint16_t SPI_Mode;                   /*!< SPI主从模式
+                                            参数取值 @ref SPI_Mode */
 
-  uint16_t SPI_DataSize;               /*!< ��֡���ݿ���
-                                            ����ȡֵ @ref SPI_Data_Size */
+  uint16_t SPI_DataSize;               /*!< 单帧数据宽度
+                                            参数取值 @ref SPI_Data_Size */
 
-  uint16_t SPI_CPOL;                   /*!< ����ʱ�Ӵ�������
-                                            ����ȡֵ @ref SPI_Clock_Polarity */
+  uint16_t SPI_CPOL;                   /*!< 串行时钟待机极性
+                                            参数取值 @ref SPI_Clock_Polarity */
 
-  uint16_t SPI_CPHA;                   /*!< ����ʱ����λ����
-                                            ����ȡֵ @ref SPI_Clock_Phase */
+  uint16_t SPI_CPHA;                   /*!< 串行时钟相位配置
+                                            参数取值 @ref SPI_Clock_Phase */
 
-  uint16_t SPI_NSS;                    /*!< CS�ܽ�����
-                                            ����ȡֵ @ref SPI_Slave_Select_Management */
+  uint16_t SPI_NSS;                    /*!< CS管脚配置
+                                            参数取值 @ref SPI_Slave_Select_Management */
 
-  uint16_t SPI_BaudRatePrescaler;      /*!< ����ģʽ��SCK����������
-                                            ����ȡֵ @ref SPI_BaudRate_Prescaler */
+  uint16_t SPI_BaudRatePrescaler;      /*!< 主机模式下SCK波特率配置
+                                            参数取值 @ref SPI_BaudRate_Prescaler */
 
-  uint16_t SPI_FirstBit;               /*!< ����֡�ߵ�λ˳��ѡ��
-                                            ����ȡֵ @ref SPI_MSB_LSB_Transmission */
+  uint16_t SPI_FirstBit;               /*!< 数据帧高低位顺序选择
+                                            参数取值 @ref SPI_MSB_LSB_Transmission */
 
-  uint16_t SPI_Speed;                  /*!< ����SPI�Ĳ����Ƿ��Ӻ󣬸������Ӻ������²����Ӻ�
-                                            ����ȡֵ @ref SPI_Speed */
+  uint16_t SPI_Speed;                  /*!< 设置SPI的采样是否延后，高速下延后，慢速下不用延后
+                                            参数取值 @ref SPI_Speed */
 } SPI_InitTypeDef;
 
 /******************************************************************************
@@ -66,10 +66,10 @@ typedef struct
   * @{
   */
 
-#define SPI_Direction_2Lines_FullDuplex     ((uint16_t)0x0000) //˫��ȫ˫��
-#define SPI_Direction_1Line_TxOnly          ((uint16_t)0x4000) //��������
-#define SPI_Direction_1Line_RxOnly          ((uint16_t)0x8000) //��������
-#define SPI_Direction_1Lines_HalfDuplex     ((uint16_t)0xC000) //���߰�˫��
+#define SPI_Direction_2Lines_FullDuplex     ((uint16_t)0x0000) //双向全双工
+#define SPI_Direction_1Line_TxOnly          ((uint16_t)0x4000) //单工单发
+#define SPI_Direction_1Line_RxOnly          ((uint16_t)0x8000) //单工单收
+#define SPI_Direction_1Lines_HalfDuplex     ((uint16_t)0xC000) //单线半双工
 #define IS_SPI_DIRECTION_MODE(MODE) (((MODE) == SPI_Direction_2Lines_FullDuplex) || \
                                      ((MODE) == SPI_Direction_1Lines_HalfDuplex) || \
                                      ((MODE) == SPI_Direction_1Line_TxOnly) || \
@@ -260,42 +260,42 @@ typedef struct
  * Global function prototypes 
  ******************************************************************************/
 
-/* �����շ� */
+/* 数据收发 */
 void SPI_SendData(SPI_TypeDef* SPIx, uint16_t Data);
 uint16_t SPI_ReceiveData(SPI_TypeDef* SPIx);
 
-/* ��ʼ�� */
+/* 初始化 */
 void SPI_Init(SPI_TypeDef* SPIx, SPI_InitTypeDef* SPI_InitStruct);
 void SPI_StructInit(SPI_InitTypeDef* SPI_InitStruct);
 void SPI1_DeInit(void);
 void SPI2_DeInit(void);
 
-/* ʹ�ܻ��ֹSPIx */
+/* 使能或禁止SPIx */
 void SPI_Cmd(SPI_TypeDef* SPIx, FunctionalState NewState);
 
-/* �жϼ���־ */
+/* 中断及标志 */
 void SPI_ITConfig(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT, FunctionalState NewState);
 ITStatus SPI_GetITStatus(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
 void SPI_ClearITPendingBit(SPI_TypeDef* SPIx, uint8_t SPI_I2S_IT);
 FlagStatus SPI_GetFlagStatus(SPI_TypeDef* SPIx, uint16_t SPI_FLAG);
 void SPI_ClearFlag(SPI_TypeDef* SPIx, uint16_t SPI_FLAG);
 
-/* ���߰�˫�����ݴ��䷽������ */
+/* 单线半双工数据传输方向配置 */
 void SPI_BiDirectionalLineConfig(SPI_TypeDef* SPIx, uint8_t SPI_Direction);
 
 /* DMA */
 void SPI_DMACmd(SPI_TypeDef* SPIx, uint32_t SPI_DMAReq, FunctionalState NewState);
 
-/* �����ڲ�����NSS */
+/* 软件内部配置NSS */
 void SPI_NSSInternalSoftwareConfig(SPI_TypeDef* SPIx, uint8_t SPI_NSSInternalSoft);
 
-/* ��������֡��λ�� */
+/* 设置数据帧的位宽 */
 void SPI_DataSizeConfig(SPI_TypeDef* SPIx, uint16_t SPI_DataSize);
 
-/* ��ģʽMISO�������*/
+/* 从模式MISO输出配置*/
 void SPI_MISOOutputConfig(SPI_TypeDef* SPIx, uint8_t SPI_MISOOutput);
 
-/* ��շ��ͻ���������λ�Ĵ��� */
+/* 清空发送缓冲区和移位寄存器 */
 void SPI_FlushSendBuff(SPI_TypeDef* SPIx);
 
 #ifdef __cplusplus

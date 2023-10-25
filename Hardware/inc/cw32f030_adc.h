@@ -10,18 +10,18 @@
 */
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 
@@ -188,22 +188,22 @@ extern "C"
 
 /** @defgroup ADC_ChSel
   * @{
-  * ͨ��0����PA00
-  * ͨ��1����PA01
-  * ͨ��2����PA02
-  * ͨ��3����PA03
-  * ͨ��4����PA04
-  * ͨ��5����PA05
-  * ͨ��6����PA06
-  * ͨ��7����PA07
-  * ͨ��8����PB00
-  * ͨ��9����PB01
-  * ͨ��10����PB02
-  * ͨ��11����PB10
-  * ͨ��12����PB11
-  * 1/3 VDDA(����ʹ����������)
-  * BGR_TS(����ʹ����������)
-  * Vref1P2(����ʹ����������)
+  * 通道0输入PA00
+  * 通道1输入PA01
+  * 通道2输入PA02
+  * 通道3输入PA03
+  * 通道4输入PA04
+  * 通道5输入PA05
+  * 通道6输入PA06
+  * 通道7输入PA07
+  * 通道8输入PB00
+  * 通道9输入PB01
+  * 通道10输入PB02
+  * 通道11输入PB10
+  * 通道12输入PB11
+  * 1/3 VDDA(必须使用输入增益)
+  * BGR_TS(必须使用输入增益)
+  * Vref1P2(必须使用输入增益)
   */
 #define ADC_ExInputCH0		((uint32_t)0x00000000)
 #define ADC_ExInputCH1		((uint32_t)0x00000001)
@@ -357,22 +357,22 @@ extern "C"
 
 /** @defgroup ADC_SqrChmux
   * @{
-  * ͨ��0����PA00
-  * ͨ��1����PA01
-  * ͨ��2����PA02
-  * ͨ��3����PA03
-  * ͨ��4����PA04
-  * ͨ��5����PA05
-  * ͨ��6����PA06
-  * ͨ��7����PA07
-  * ͨ��8����PB00
-  * ͨ��9����PB01
-  * ͨ��10����PB02
-  * ͨ��11����PB10
-  * ͨ��12����PB11
-  * 1/3 VDDA(����ʹ����������)
-  * BGR_TS(����ʹ����������)
-  * Vref1P2(����ʹ����������)
+  * 通道0输入PA00
+  * 通道1输入PA01
+  * 通道2输入PA02
+  * 通道3输入PA03
+  * 通道4输入PA04
+  * 通道5输入PA05
+  * 通道6输入PA06
+  * 通道7输入PA07
+  * 通道8输入PB00
+  * 通道9输入PB01
+  * 通道10输入PB02
+  * 通道11输入PB10
+  * 通道12输入PB11
+  * 1/3 VDDA(必须使用输入增益)
+  * BGR_TS(必须使用输入增益)
+  * Vref1P2(必须使用输入增益)
   */
 #define ADC_SqrCh0		((uint32_t)0x00000000)
 #define ADC_SqrCh1		((uint32_t)0x00000001)
@@ -412,22 +412,22 @@ extern "C"
 
 /** @defgroup ADC_WdtChmux
   * @{
-  * ͨ��0����PA00
-  * ͨ��1����PA01
-  * ͨ��2����PA02
-  * ͨ��3����PA03
-  * ͨ��4����PA04
-  * ͨ��5����PA05
-  * ͨ��6����PA06
-  * ͨ��7����PA07
-  * ͨ��8����PB00
-  * ͨ��9����PB01
-  * ͨ��10����PB02
-  * ͨ��11����PB10
-  * ͨ��12����PB11
-  * 1/3 VDDA(����ʹ����������)
-  * BGR_TS(����ʹ����������)
-  * Vref1P2(����ʹ����������)
+  * 通道0输入PA00
+  * 通道1输入PA01
+  * 通道2输入PA02
+  * 通道3输入PA03
+  * 通道4输入PA04
+  * 通道5输入PA05
+  * 通道6输入PA06
+  * 通道7输入PA07
+  * 通道8输入PB00
+  * 通道9输入PB01
+  * 通道10输入PB02
+  * 通道11输入PB10
+  * 通道12输入PB11
+  * 1/3 VDDA(必须使用输入增益)
+  * BGR_TS(必须使用输入增益)
+  * Vref1P2(必须使用输入增益)
   */
 #define ADC_WdtCh0		((uint32_t)0x00000000)
 #define ADC_WdtCh1		((uint32_t)0x00000100)
@@ -577,106 +577,106 @@ extern "C"
 
 /**
  ******************************************************************************
- ** @brief  ADC����
+ ** @brief  ADC配置
  *****************************************************************************/
 typedef struct
 {
-    uint32_t    	ADC_OpMode;			/*ADC����ģʽ*/
+    uint32_t    	ADC_OpMode;			/*ADC操作模式*/
 
-    uint32_t    	ADC_ClkDiv;			/*ADCʱ��ѡ��*/
+    uint32_t    	ADC_ClkDiv;			/*ADC时钟选择*/
 
-    uint32_t  		ADC_SampleTime;		/*ADC����ʱ��*/
+    uint32_t  		ADC_SampleTime;		/*ADC采样时间*/
 
-    uint32_t   		ADC_VrefSel;	    /*ADC�ο���ѹ*/
+    uint32_t   		ADC_VrefSel;	    /*ADC参考电压*/
 
-    uint32_t   		ADC_InBufEn;		/*ADC��������ʹ��*/
+    uint32_t   		ADC_InBufEn;		/*ADC输入增益使能*/
 
-    uint32_t   		ADC_TsEn;			/*�����¶ȴ�����ʹ��*/
+    uint32_t   		ADC_TsEn;			/*内置温度传感器使能*/
 
-    uint32_t   		ADC_DMAEn;			/*ADCת����ɴ���DMAʹ��*/
+    uint32_t   		ADC_DMAEn;			/*ADC转换完成触发DMA使能*/
 
-    uint32_t     	ADC_Align;			/*ADCת��������뷽ʽ*/
+    uint32_t     	ADC_Align;			/*ADC转换结果对齐方式*/
 
-    uint32_t		ADC_AccEn;			/*ת������ۼ�ʹ��*/
+    uint32_t		ADC_AccEn;			/*转换结果累加使能*/
 }ADC_InitTypeDef;
 
 /**
  ******************************************************************************
- ** @brief  ADCģ�⿴�Ź�����
+ ** @brief  ADC模拟看门狗配置
  *****************************************************************************/
 typedef struct
 {
-	uint32_t 			ADC_WdtCh;  /*ADCģ�⿴�Ź�ͨ��*/
+	uint32_t 			ADC_WdtCh;  /*ADC模拟看门狗通道*/
 
-	uint32_t 			ADC_WdtAll;  /*ADCģ�⿴�Ź�ʹ��*/
+	uint32_t 			ADC_WdtAll;  /*ADC模拟看门狗使能*/
 
-	uint32_t 			ADC_WdtrIrq; /*ADC����ģ�⿴�Ź�ʹ��*/
+	uint32_t 			ADC_WdtrIrq; /*ADC区间模拟看门狗使能*/
 
-	uint32_t 			ADC_WdthIrq; /*ADC�ϳ���ģ�⿴�Ź�ʹ��*/
+	uint32_t 			ADC_WdthIrq; /*ADC上超出模拟看门狗使能*/
 
-	uint32_t 			ADC_WdtlIrq; /*ADC�³���ģ�⿴�Ź�ʹ��*/
+	uint32_t 			ADC_WdtlIrq; /*ADC下超出模拟看门狗使能*/
 
-	uint32_t 			ADC_Vth; 	 /*ADCģ�⿴�Ź�����ֵ*/
+	uint32_t 			ADC_Vth; 	 /*ADC模拟看门狗上阈值*/
 
-	uint32_t 			ADC_Vtl; 	 /*ADCģ�⿴�Ź�����ֵ*/
+	uint32_t 			ADC_Vtl; 	 /*ADC模拟看门狗下阈值*/
 }ADC_WdtTypeDef;
 
 /**
  ******************************************************************************
- ** @brief  ADC��ͨ������
+ ** @brief  ADC单通道配置
  *****************************************************************************/
 typedef struct
 {
-    uint32_t 			ADC_Chmux;	/*ADC��ͨ��ת��ģʽ��ת��ͨ��*/
+    uint32_t 			ADC_Chmux;	/*ADC单通道转换模式待转换通道*/
 
-    uint32_t			ADC_DiscardEn;	/*��ͨ��ADCת����������������*/
+    uint32_t			ADC_DiscardEn;	/*单通道ADC转换结果保存策略配置*/
 
-    ADC_InitTypeDef  	ADC_InitStruct;	/*ADC��ʼ��*/
+    ADC_InitTypeDef  	ADC_InitStruct;	/*ADC初始化*/
 
-    ADC_WdtTypeDef   	ADC_WdtStruct;		/*ADCģ�⿴�Ź�����*/
+    ADC_WdtTypeDef   	ADC_WdtStruct;		/*ADC模拟看门狗配置*/
 }ADC_SingleChTypeDef;
 
 /**
  ******************************************************************************
- ** @brief  ADC��������
+ ** @brief  ADC序列配置
  *****************************************************************************/
 typedef struct
 {
-	uint32_t    		ADC_SqrEns;		/*ADC����ת������������*/
+	uint32_t    		ADC_SqrEns;		/*ADC序列转换的序列配置*/
 
-	uint32_t  			ADC_Sqr3Chmux;	/*ADC����3��ת��ͨ��*/
+	uint32_t  			ADC_Sqr3Chmux;	/*ADC序列3待转换通道*/
 
-	uint32_t  			ADC_Sqr2Chmux;	/*ADC����2��ת��ͨ��*/
+	uint32_t  			ADC_Sqr2Chmux;	/*ADC序列2待转换通道*/
 
-	uint32_t  			ADC_Sqr1Chmux;	/*ADC����1��ת��ͨ��*/
+	uint32_t  			ADC_Sqr1Chmux;	/*ADC序列1待转换通道*/
 
-	uint32_t  			ADC_Sqr0Chmux;	/*ADC����0��ת��ͨ��*/
+	uint32_t  			ADC_Sqr0Chmux;	/*ADC序列0待转换通道*/
 
-    ADC_InitTypeDef		ADC_InitStruct;		/*ADC��ʼ��*/
+    ADC_InitTypeDef		ADC_InitStruct;		/*ADC初始化*/
 }ADC_SerialChTypeDef;
 
 
 /**
  ******************************************************************************
- ** @brief  ADC�ж�����
+ ** @brief  ADC中断配置
  *****************************************************************************/
 typedef struct
 {
-	boolean_t 	ADC_ReadyFlag;	/*ADC��ʼ����ɱ�־*/
+	boolean_t 	ADC_ReadyFlag;	/*ADC初始化完成标志*/
 
-	boolean_t 	ADC_OvwIrq;		/*ADCת���������ж�*/
+	boolean_t 	ADC_OvwIrq;		/*ADC转换结果溢出中断*/
 
-	boolean_t 	ADC_WdtrIrq;		/*ADCģ�⿴�Ź������ж�*/
+	boolean_t 	ADC_WdtrIrq;		/*ADC模拟看门狗区间中断*/
 
-	boolean_t 	ADC_WdthIrq;		/*ADCģ�⿴�Ź�����ֵ�ж�*/
+	boolean_t 	ADC_WdthIrq;		/*ADC模拟看门狗上阈值中断*/
 
-	boolean_t 	ADC_WdtlIrq;		/*ADCģ�⿴�Ź�����ֵ�ж�*/
+	boolean_t 	ADC_WdtlIrq;		/*ADC模拟看门狗下阈值中断*/
 
-	boolean_t 	ADC_EoaIrq;		/*ADC���ת������ж�*/
+	boolean_t 	ADC_EoaIrq;		/*ADC多次转换完成中断*/
 
-	boolean_t 	ADC_EosIrq;		/*ADC����ת������ж�*/
+	boolean_t 	ADC_EosIrq;		/*ADC序列转换完成中断*/
 
-	boolean_t 	ADC_EocIrq;		/*ADC����ת������ж�*/
+	boolean_t 	ADC_EocIrq;		/*ADC单次转换完成中断*/
 }ADC_IrqTypeDef;
 
 
@@ -690,114 +690,114 @@ typedef struct
 /******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
-//ADCȥ��ʼ��
+//ADC去初始化
 void ADC_DeInit(void);
-//ADC��ʼ��
+//ADC初始化
 void ADC_Init(ADC_InitTypeDef* ADC_InitStruct);
-//ADCĬ��ֵ��ʼ��
+//ADC默认值初始化
 void ADC_StructInit(ADC_InitTypeDef* ADC_InitStruct);
-//ADCģ�⿴�Ź�Ĭ��ֵ��ʼ��
+//ADC模拟看门狗默认值初始化
 void ADC_WdtInit(ADC_WdtTypeDef* ADC_WdtStruct);
-//ADCʹ��
+//ADC使能
 void ADC_Enable(void);
-//ADC����
+//ADC禁用
 void ADC_Disable(void);
 
-//����DMA��ȡ����
+//触发DMA读取命令
 void ADC_DMACmd(FunctionalState NewState);
-//����DMA��ȡʹ��
+//触发DMA读取使能
 void ADC_DMAEnable(void);
-//����DMA��ȡ��ֹ
+//触发DMA读取禁止
 void ADC_DMADisable(void);
 
-//ADCת��������������
+//ADC转换软件启动命令
 void ADC_SoftwareStartConvCmd(FunctionalState NewState);
-//ADC�ⲿ�жϴ���Դ����
+//ADC外部中断触发源配置
 void ADC_ExtTrigCfg(uint16_t ADC_TRIG, FunctionalState NewState);
 
-//��ͨ��ת��ģʽ��������
+//单通道转换模式公共配置
 void ADC_SingleChCommon(ADC_SingleChTypeDef* ADC_SingleChStruct);
-//ADC��ͨ������ת��ģʽ����
+//ADC单通道单次转换模式配置
 void ADC_SingleChOneModeCfg(ADC_SingleChTypeDef* ADC_SingleChStruct);
-//ADC��ͨ�����ת��ģʽ����
+//ADC单通道多次转换模式配置
 void ADC_SingleChMoreModeCfg(ADC_SingleChTypeDef* ADC_SingleChStruct, uint8_t cntAdcSample);
-//ADC��ͨ������ת��ģʽ����
+//ADC单通道连续转换模式配置
 void ADC_SingleChContinuousModeCfg(ADC_SingleChTypeDef* ADC_SingleChStruct);
-//ADC����ת��ģʽ��������
+//ADC序列转换模式公共配置
 void ADC_SerialChCommon(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//ADC��������ת��ģʽ����
+//ADC序列连续转换模式配置
 void ADC_SerialChContinuousModeCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//ADC����ɨ��ת��ģʽ����
+//ADC序列扫描转换模式配置
 void ADC_SerialChScanModeCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//ADC���ж��ת��ģʽ����
+//ADC序列多次转换模式配置
 void ADC_SerialChMoreModeCfg(ADC_SerialChTypeDef* ADC_SerialChStruct, uint8_t cntAdcSample);
-//ADC���ж���ת��ģʽ����
+//ADC序列断续转换模式配置
 void ADC_SerialChBreakModeCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
 
-//����SQR0ת��ͨ������
+//序列SQR0转换通道配置
 void ADC_Sqr0ChannelCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//����SQR0/SQR1ת��ͨ������
+//序列SQR0/SQR1转换通道配置
 void ADC_Sqr01ChannelCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//����SQR0~SQR2ת��ͨ������
+//序列SQR0~SQR2转换通道配置
 void ADC_Sqr02ChannelCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
-//����SQR0~SQR3ת��ͨ������
+//序列SQR0~SQR3转换通道配置
 void ADC_Sqr03ChannelCfg(ADC_SerialChTypeDef* ADC_SerialChStruct);
 
-//��ͨ��ģʽ�����ø�����ʹ��
+//单通道模式的内置跟随器使能
 void ADC_BufEnSingleCh( uint32_t enAdcSampCh);
-//����ģʽ�����ø�����ʹ��
+//序列模式的内置跟随器使能
 void ADC_BufEnSerialCh( uint32_t enAdcSampCh);
 
-//ADCģ�⿴�Ź�����
+//ADC模拟看门狗配置
 void ADC_WdtConfig(ADC_WdtTypeDef* ADC_WdtStruct);
 
-//ADC�ж�����
+//ADC中断配置
 void ADC_ITConfig(uint16_t ADC_IT, FunctionalState NewState);
-//ADC�ж�ʹ��
+//ADC中断使能
 void ADC_EnableIrq(uint8_t intPriority);
-//ADC�жϽ�ֹ
+//ADC中断禁止
 void ADC_DisableIrq(void);
-//ʹ��NVIC��ADC�ж�
+//使能NVIC中ADC中断
 void ADC_EnableNvic(uint8_t intPriority);
-//����NVIC��ADC�ж�
+//禁用NVIC中ADC中断
 void ADC_DisableNvic(void);
-//��ȡADC�����ж�״̬
+//获取ADC所有中断状态
 void ADC_GetITStatusAll(volatile uint8_t* pFlagAdcIrq);
-//��ȡADCָ�����ж�״̬
+//获取ADC指定的中断状态
 ITStatus ADC_GetITStatus(uint16_t ADC_IT);
-//���ADC�����ж�״̬
+//清除ADC所有中断状态
 void ADC_ClearITPendingAll(void);
-//���ADCָ�����ж�״̬
+//清除ADC指定的中断状态
 void ADC_ClearITPendingBit(uint16_t ADC_IT);
 
-//��ȡ����ת������ֵ
+//获取单次转换采样值
 uint16_t ADC_GetConversionValue(void);
-//��ȡSQR0ͨ������ֵ
+//获取SQR0通道采样值
 void ADC_GetSqr0Result(uint16_t* pAdcResult);
-//��ȡSQR1ͨ������ֵ
+//获取SQR1通道采样值
 void ADC_GetSqr1Result(uint16_t* pAdcResult);
-//��ȡSQR2ͨ������ֵ
+//获取SQR2通道采样值
 void ADC_GetSqr2Result(uint16_t* pAdcResult);
-//��ȡSQR3ͨ������ֵ
+//获取SQR3通道采样值
 void ADC_GetSqr3Result(uint16_t* pAdcResult);
-//��ȡ�ۼӲ���ֵ
+//获取累加采样值
 void ADC_GetAccResult(uint32_t* pAdcAccResult);
-//�����ۼӲ���ֵ
+//清零累加采样值
 void ADC_ClrAccResult(void);
 
-//���òο���ѹ
+//设置参考电压
 void ADC_SetVref(uint32_t ADC_VrefSel);
-//���ý�����뷽ʽ
+//设置结果对齐方式
 void ADC_SetAlign(uint32_t enAlign);
-//���õ�ͨ��ADCת���������������
+//设置单通道ADC转换结果溢出保存策略
 void ADC_SetDiscard(uint32_t enDiscard);
-//���������¶ȴ�����ʹ�ܿ���
+//设置内置温度传感器使能控制
 void ADC_SetTs(uint32_t enTs);
-//��ȡADC�ο���ѹ1.5Vʱ���¶ȴ������Ĳ����¶�
+//读取ADC参考电压1.5V时的温度传感器的测量温度
 void ADC_GetTsVref1V5(float* fAdcTsDegree);
-//��ȡADC�ο���ѹ2.5Vʱ���¶ȴ������Ĳ����¶�
+//读取ADC参考电压2.5V时的温度传感器的测量温度
 void ADC_GetTsVref2V5(float* fAdcTsDegree);
-//����ADCת�������Զ�ֹͣ
+//设置ADC转换结束自动停止
 void ADC_AutoStop(uint32_t enAutoStop);
 //@}
 #ifdef __cplusplus

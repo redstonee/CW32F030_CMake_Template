@@ -1,17 +1,17 @@
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 /* Define to prevent recursive inclusion -------------------------------------*/
@@ -30,48 +30,48 @@
  ******************************************************************************/ 
 typedef struct
 {
-  uint32_t CounterDirection;        /*!< �������� */
+  uint32_t CounterDirection;        /*!< 计数方向 */
 
-  uint32_t CounterOPMode;           /*!< ����ģʽ�����λ��ظ� */
+  uint32_t CounterOPMode;           /*!< 运行模式：单次或重复 */
 
-  uint32_t CounterAlignedMode;      /*!< ��������ģʽ: ���ػ����� */
+  uint32_t CounterAlignedMode;      /*!< 计数对齐模式: 边沿或中央 */
 
-  FunctionalState BufferState;      /*!<  ARR����ʹ�� */
+  FunctionalState BufferState;      /*!<  ARR缓存使能 */
 
-  uint32_t Prescaler;               /*!< Ԥ��Ƶϵ�� */
+  uint32_t Prescaler;               /*!< 预分频系数 */
   
-  uint32_t ClockSelect;             /*!< ����ʱ��ѡ�� */            
+  uint32_t ClockSelect;             /*!< 计数时钟选择 */            
 
-  uint32_t ReloadValue;           /*!< ARR��ֵ��ȡֵ��Χ0x0000~0xFFFF */  
+  uint32_t ReloadValue;           /*!< ARR赋值，取值范围0x0000~0xFFFF */  
 
-  uint32_t RepetitionCounter;     /*!< �ظ����ڼ���ֵ��RCR�Ĵ��� */
+  uint32_t RepetitionCounter;     /*!< 重复周期计数值，RCR寄存器 */
 
-  FunctionalState UnderFlowMask; /*!< ���������ʹ�� */
+  FunctionalState UnderFlowMask; /*!< 下溢出屏蔽使能 */
 
-  FunctionalState OverFlowMask;  /*!< ���������ʹ�� */   
+  FunctionalState OverFlowMask;  /*!< 上溢出屏蔽使能 */   
 
  } ATIM_InitTypeDef;  
 
  typedef struct
 {
-  uint32_t ICPolarity;  /*!< ���벶���ԣ��������½���˫�� */
+  uint32_t ICPolarity;  /*!< 输入捕获极性：上升、下降、双沿 */
  
-  uint32_t ICFilter;     /*!< �����˲����� */
+  uint32_t ICFilter;     /*!< 输入滤波配置 */
 } ATIM_ICInitTypeDef;
 
 typedef struct
 {
-  uint32_t OCPolarity;  /*!< �˿ڼ���ѡ�����򡢷��� */
+  uint32_t OCPolarity;  /*!< 端口极性选择：正向、反向 */
  
-  uint32_t OCMode;     /*!< �Ƚ�ģʽ���� */
+  uint32_t OCMode;     /*!< 比较模式配置 */
 
-  uint32_t OCInterruptSelect;    /*!< �Ƚ��ж�ģʽ */
+  uint32_t OCInterruptSelect;    /*!< 比较中断模式 */
 
-  FunctionalState OCDMAState;  /*!< �Ƚ�ƥ�䴥��DMAʹ��״̬ */
+  FunctionalState OCDMAState;  /*!< 比较匹配触发DMA使能状态 */
 
-  FunctionalState OCInterruptState; /*!< �Ƚ�ƥ�䴥���ж�ʹ��״̬ */
+  FunctionalState OCInterruptState; /*!< 比较匹配触发中断使能状态 */
 
-  FunctionalState BufferState;    /*!< �Ƚϻ���ʹ��״̬ */
+  FunctionalState BufferState;    /*!< 比较缓存使能状态 */
 } ATIM_OCInitTypeDef;     
 /******************************************************************************
  * pre-processor symbols/macros ('#define')
@@ -245,39 +245,39 @@ typedef struct
 #define IS_ATIM_OUTPUT_TYPE(TYPE) ((TYPE) == OUTPUT_TYPE_ALONE || (TYPE) == OUTPUT_TYPE_COMP)
 #define IS_ATIM_DEADTIME(VAL)        ((VAL)<= 0xFF)
 
-#define ATIM_MASTER_OUTPUT_UG        0x00    // ��������UG
-#define ATIM_MASTER_OUTPUT_CTEN      0x01    // ��ʱ��ʹ��CTEN
-#define ATIM_MASTER_OUTPUT_UEV       0x02    // ��ʱ��ʱ�����UEV
-#define ATIM_MASTER_OUTPUT_CMPSO     0x03    // �Ƚ�ƥ��ѡ�����CMPSO
-#define ATIM_MASTER_OUTPUT_OCREF1A   0x04    // ��ʱ���Ƚ����OCREF1A
-#define ATIM_MASTER_OUTPUT_OCREF2A   0x05    // ��ʱ���Ƚ����OCREF2A
-#define ATIM_MASTER_OUTPUT_OCREF3A   0x06    // ��ʱ���Ƚ����OCREF3A
-#define ATIM_MASTER_OUTPUT_OCREF1B   0x07    // ��ʱ���Ƚ����OCREF1B
+#define ATIM_MASTER_OUTPUT_UG        0x00    // 软件更新UG
+#define ATIM_MASTER_OUTPUT_CTEN      0x01    // 定时器使能CTEN
+#define ATIM_MASTER_OUTPUT_UEV       0x02    // 定时器时间更新UEV
+#define ATIM_MASTER_OUTPUT_CMPSO     0x03    // 比较匹配选择输出CMPSO
+#define ATIM_MASTER_OUTPUT_OCREF1A   0x04    // 定时器比较输出OCREF1A
+#define ATIM_MASTER_OUTPUT_OCREF2A   0x05    // 定时器比较输出OCREF2A
+#define ATIM_MASTER_OUTPUT_OCREF3A   0x06    // 定时器比较输出OCREF3A
+#define ATIM_MASTER_OUTPUT_OCREF1B   0x07    // 定时器比较输出OCREF1B
 #define IS_ATIM_MASTER_OUTPUT(OUTPUT) ((OUTPUT) <= 0x07)
 
-#define ATIM_SLAVER_TYPE_PCLK        0x00    // �ڲ�ʱ��
-#define ATIM_SLAVER_TYPE_RESET       0x01    // ��λ����
-#define ATIM_SLAVER_TYPE_TRIGGER     0x02    // ����ģʽ
-#define ATIM_SLAVER_TYPE_EXT         0x03    // �ⲿʱ��
-#define ATIM_SLAVER_TYPE_ENCODE1     0x04    // �����������ģʽ1
-#define ATIM_SLAVER_TYPE_ENCODE2     0x05    // �����������ģʽ2
-#define ATIM_SLAVER_TYPE_ENCODE3     0x06    // �����������ģʽ3
-#define ATIM_SLAVER_TYPE_GATE        0x07    // �ſع���
+#define ATIM_SLAVER_TYPE_PCLK        0x00    // 内部时钟
+#define ATIM_SLAVER_TYPE_RESET       0x01    // 复位功能
+#define ATIM_SLAVER_TYPE_TRIGGER     0x02    // 触发模式
+#define ATIM_SLAVER_TYPE_EXT         0x03    // 外部时钟
+#define ATIM_SLAVER_TYPE_ENCODE1     0x04    // 正交编码计数模式1
+#define ATIM_SLAVER_TYPE_ENCODE2     0x05    // 正交编码计数模式2
+#define ATIM_SLAVER_TYPE_ENCODE3     0x06    // 正交编码计数模式3
+#define ATIM_SLAVER_TYPE_GATE        0x07    // 门控功能
 #define IS_ATIM_SLAVER_TYPE(TYPE) ((TYPE) <= 0x07)
 
-#define ATIM_TRIGGER_SOURCE_ETFP      0x00  // �˿�ETR���˲���λѡ�����ź�ETFP
-#define ATIM_TRIGGER_SOURCE_ITR       0x01  // �ڲ������ź�ITR
-#define ATIM_TRIGGER_SOURCE_CH1A      0x05  // �˿�CH1A�ı����ź�
-#define ATIM_TRIGGER_SOURCE_IAFP      0x06  // �˿�CH1A���˲���λѡ�����ź�IAFP
-#define ATIM_TRIGGER_SOURCE_IBFP      0x07  // �˿�CH1B���˲���λѡ�����ź�IBFP
+#define ATIM_TRIGGER_SOURCE_ETFP      0x00  // 端口ETR的滤波相位选择后的信号ETFP
+#define ATIM_TRIGGER_SOURCE_ITR       0x01  // 内部互联信号ITR
+#define ATIM_TRIGGER_SOURCE_CH1A      0x05  // 端口CH1A的边沿信号
+#define ATIM_TRIGGER_SOURCE_IAFP      0x06  // 端口CH1A的滤波相位选择后的信号IAFP
+#define ATIM_TRIGGER_SOURCE_IBFP      0x07  // 端口CH1B的滤波相位选择后的信号IBFP
 #define IS_ATIM_TRIGGER_SOURCE(SRC) ((SRC) == ATIM_TRIGGER_SOURCE_ETFP || \
                                      (SRC) == ATIM_TRIGGER_SOURCE_ITR ||  \
                                      (SRC) == ATIM_TRIGGER_SOURCE_CH1A || \
                                      (SRC) == ATIM_TRIGGER_SOURCE_IAFP || \
                                      (SRC) == ATIM_TRIGGER_SOURCE_IBFP)
 
-#define ATIM_UPDATE_EVENT_NORMAL      0x01  // �����/�����
-#define ATIM_UPDATE_EVENT_EXTENSION   0x00  // �����/�����/��������/��ģʽ��λ
+#define ATIM_UPDATE_EVENT_NORMAL      0x01  // 上溢出/下溢出
+#define ATIM_UPDATE_EVENT_EXTENSION   0x00  // 上溢出/下溢出/软件更新/从模式复位
 #define IS_ATIM_UPDATE_EVENT(EVENT) ((EVENT) == ATIM_UPDATE_EVENT_NORMAL || \
                                      (EVENT) == ATIM_UPDATE_EVENT_EXTENSION)
    /******************************************************************************

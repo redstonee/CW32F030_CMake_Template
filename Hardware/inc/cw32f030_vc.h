@@ -10,18 +10,18 @@
  */
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 
@@ -97,14 +97,14 @@ extern "C"
 /** @defgroup VC_InputP
   * @{
   * VC1                 VC2
-  * ����ͨ��0  PA00	    ����ͨ��0 PA05
-  * ����ͨ��1  PA01		����ͨ��1 PA06
-  * ����ͨ��2  PA02		����ͨ��2 PA07
-  * ����ͨ��3  PA03		����ͨ��3 PB00
-  * ����ͨ��4  PA04		����ͨ��4 PB01
-  * ����ͨ��5  PA05		����ͨ��5 PB02
-  * ����ͨ��6  PA06		����ͨ��6 PB10
-  * ����ͨ��7  PA07		����ͨ��7 PB11
+  * 输入通道0  PA00	    输入通道0 PA05
+  * 输入通道1  PA01		输入通道1 PA06
+  * 输入通道2  PA02		输入通道2 PA07
+  * 输入通道3  PA03		输入通道3 PB00
+  * 输入通道4  PA04		输入通道4 PB01
+  * 输入通道5  PA05		输入通道5 PB02
+  * 输入通道6  PA06		输入通道6 PB10
+  * 输入通道7  PA07		输入通道7 PB11
   */
 #define VC_InputP_Ch0		((uint32_t)0x00000000)
 #define VC_InputP_Ch1		((uint32_t)0x00000100)
@@ -128,18 +128,18 @@ extern "C"
 /** @defgroup VC_InputN
   * @{
   * VC1                 VC2
-  * ����ͨ��0  PA00	    ����ͨ��0 PA05
-  * ����ͨ��1  PA01		����ͨ��1 PA06
-  * ����ͨ��2  PA02		����ͨ��2 PA07
-  * ����ͨ��3  PA03		����ͨ��3 PB00
-  * ����ͨ��4  PA04		����ͨ��4 PB01
-  * ����ͨ��5  PA05		����ͨ��5 PB02
-  * ����ͨ��6  PA06		����ͨ��6 PB10
-  * ����ͨ��7  PA07		����ͨ��7 PB11
-  * VDDA��ѹ			    VDDA��ѹ
+  * 输入通道0  PA00	    输入通道0 PA05
+  * 输入通道1  PA01		输入通道1 PA06
+  * 输入通道2  PA02		输入通道2 PA07
+  * 输入通道3  PA03		输入通道3 PB00
+  * 输入通道4  PA04		输入通道4 PB01
+  * 输入通道5  PA05		输入通道5 PB02
+  * 输入通道6  PA06		输入通道6 PB10
+  * 输入通道7  PA07		输入通道7 PB11
+  * VDDA分压			    VDDA分压
   * ADC VREF            ADC VREF
   * BGR 1.2V 		    BGR 1.2V
-  * �¶ȴ�����			    �¶ȴ�����
+  * 温度传感器			    温度传感器
   */
 #define VC_InputN_Ch0			((uint32_t)0x00000000)
 #define VC_InputN_Ch1			((uint32_t)0x00001000)
@@ -321,56 +321,56 @@ extern "C"
 
 /**
  ******************************************************************************
- ** @brief VCģ������
+ ** @brief VC模块配置
  *****************************************************************************/
 typedef struct
 {
-    uint32_t 	VC_DivVref;     	// 6-bit VDDA divider����ο���ѹѡ��
-    uint32_t 	VC_DivEn;        	// ʹ��6-bit VDDA divider
-    uint8_t 	VC_DivValue;		// 6-bit VDDA divider����ֵ
+    uint32_t 	VC_DivVref;     	// 6-bit VDDA divider输入参考电压选择
+    uint32_t 	VC_DivEn;        	// 使能6-bit VDDA divider
+    uint8_t 	VC_DivValue;		// 6-bit VDDA divider设置值
 }VC_DivTypeDef;
 
 /**
  ******************************************************************************
- ** @brief VCͨ������
+ ** @brief VC通道配置
  *****************************************************************************/
 typedef struct
 {
-    uint32_t VC_InputP;        	// P������
-    uint32_t VC_InputN;        	// N������
-    uint32_t VC_Hys;         	// VC����
-    uint32_t VC_Resp;      		// VC��Ӧ�ٶ�
-    uint32_t VC_FilterEn;	    // VC�����˲�ʹ��
-    uint32_t VC_FilterClk;      // �˲�ʱ��Դ
-    uint32_t VC_FilterTime;		// ����˲�ʱ��
-    uint32_t VC_Window;	      	// VC���ڱȽϹ���ʹ��
-    uint32_t VC_Polarity;	    // VC����źż�������
+    uint32_t VC_InputP;        	// P端输入
+    uint32_t VC_InputN;        	// N端输入
+    uint32_t VC_Hys;         	// VC迟滞
+    uint32_t VC_Resp;      		// VC响应速度
+    uint32_t VC_FilterEn;	    // VC数字滤波使能
+    uint32_t VC_FilterClk;      // 滤波时钟源
+    uint32_t VC_FilterTime;		// 输出滤波时间
+    uint32_t VC_Window;	      	// VC窗口比较功能使能
+    uint32_t VC_Polarity;	    // VC输出信号极性设置
 }VC_InitTypeDef;
 
 /**
  ******************************************************************************
- ** @brief  VCģ��Blank��������
+ ** @brief  VC模拟Blank窗口配置
  *****************************************************************************/
 typedef struct
 {
-	uint32_t            VC_BlankFlt; /*Blank���ڳ���ʱ��*/
+	uint32_t            VC_BlankFlt; /*Blank窗口持续时间*/
 
-	uint32_t			VC_BlankCh3B;  /*ATIM��CH3����VCx����Blank����*/
+	uint32_t			VC_BlankCh3B;  /*ATIM的CH3触发VCx启动Blank窗口*/
 
-	uint32_t 			VC_BlankCh2B; /*ATIM��CH2����VCx����Blank����*/
+	uint32_t 			VC_BlankCh2B; /*ATIM的CH2触发VCx启动Blank窗口*/
 
-	uint32_t 			VC_BlankCh1B; /*ATIM��CH1����VCx����Blank����*/
+	uint32_t 			VC_BlankCh1B; /*ATIM的CH1触发VCx启动Blank窗口*/
 }VC_BlankTypeDef;
 
 /**
  ******************************************************************************
- ** @brief  VC������ӵ�ATIM��BK/CLR�ź�����
+ ** @brief  VC输出连接到ATIM的BK/CLR信号配置
  *****************************************************************************/
 typedef struct
 {
-	uint32_t 		VC_ATIMBk; 			/*VCx������ӵ�ATIM��BK�ź�*/
+	uint32_t 		VC_ATIMBk; 			/*VCx输出连接到ATIM的BK信号*/
 
-	uint32_t		VC_OutAtimClr;		/*VCx������ӵ�ATIM��CLR�ź�*/
+	uint32_t		VC_OutAtimClr;		/*VCx输出连接到ATIM的CLR信号*/
 }VC_OutTypeDef;
 
 /******************************************************************************
@@ -388,97 +388,97 @@ typedef struct
 /******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
-//VC1/VC2ģ��VCx���������źų�ʼ��
+//VC1/VC2模块VCx负端输入信号初始化
 void VC1VC2_INNInit(VC_InitTypeDef* VC_InitStruct);
 
-//VCͨ��1��ʼ��
+//VC通道1初始化
 void VC1_ChannelInit(VC_InitTypeDef* VC_InitStruct);
-//VCͨ��2��ʼ��
+//VC通道2初始化
 void VC2_ChannelInit(VC_InitTypeDef* VC_InitStruct);
-//VCͨ��1ȥ��ʼ��
+//VC通道1去初始化
 void VC1_ChannelDeInit(void);
-//VCͨ��2ȥ��ʼ��
+//VC通道2去初始化
 void VC2_ChannelDeInit(void);
-//VCģ��ȥ��ʼ��
+//VC模块去初始化
 void VC_DeInit(void);
 
-//VC1/VC2ģ��DIV�ο���ѹ��ʼ��
+//VC1/VC2模块DIV参考电压初始化
 void VC1VC2_DIVInit(VC_DivTypeDef* VC_DivStruct);
-//VC1/VC2ģ��DIV�ο���ѹȥ��ʼ��
+//VC1/VC2模块DIV参考电压去初始化
 void VC1VC2_DIVDeInit(void);
 
-//VC1ͨ��ʹ��
+//VC1通道使能
 void VC1_EnableChannel(void);
-//VC2ͨ��ʹ��
+//VC2通道使能
 void VC2_EnableChannel(void);
-//VC1ͨ������
+//VC1通道禁用
 void VC1_DisableChannel(void);
-//VC2ͨ������
+//VC2通道禁用
 void VC2_DisableChannel(void);
 
-//VC1����˲�ʹ��
+//VC1输出滤波使能
 void VC1_EnableFilter(void);
-//VC2����˲�ʹ��
+//VC2输出滤波使能
 void VC2_EnableFilter(void);
-//VC1����˲�����
+//VC1输出滤波禁用
 void VC1_DisableFilter(void);
-//VC2����˲�����
+//VC2输出滤波禁用
 void VC2_DisableFilter(void);
 
-//VCͨ��1/2 �������Ĭ��ֵ��ʼ��
+//VC通道1/2 输出连接默认值初始化
 void VC1VC2_OutInit(VC_OutTypeDef* VC_OutStruct);
-//VCͨ��1�����������
+//VC通道1输出连接配置
 void VC1_OutputCfg(VC_OutTypeDef* VC_OutStruct);
-//VCͨ��2�����������
+//VC通道2输出连接配置
 void VC2_OutputCfg(VC_OutTypeDef* VC_OutStruct);
 
-//VCͨ��1/2 BlanK����Ĭ��ֵ��ʼ��
+//VC通道1/2 BlanK窗口默认值初始化
 void VC1VC2_BlankInit(VC_BlankTypeDef* VC_BlankStruct);
-//VCͨ��1 BlanK��������
+//VC通道1 BlanK窗口配置
 void VC1_BlankCfg(VC_BlankTypeDef* VC_BlankStruct);
-//VCͨ��2 BlanK��������
+//VC通道2 BlanK窗口配置
 void VC2_BlankCfg(VC_BlankTypeDef* VC_BlankStruct);
 
-//VCͨ��1���ڱȽϹ�������
+//VC通道1窗口比较功能配置
 void VC1_WindowEnable(boolean_t bWindow);
-//VCͨ��2���ڱȽϹ�������
+//VC通道2窗口比较功能配置
 void VC2_WindowEnable(boolean_t bWindow);
 
-//VCͨ��1����źż�������
+//VC通道1输出信号极性设置
 void VC1_PolarityCfg(boolean_t bPolarity);
-//VCͨ��2����źż�������
+//VC通道2输出信号极性设置
 void VC2_PolarityCfg(boolean_t bPolarity);
 
-//ʹ��NVIC��VCx�ж�
+//使能NVIC中VCx中断
 void VC_EnableNvic(IRQn_Type enIrqn, uint8_t intPriority);
-//��ֹNVIC��VC�ж�
+//禁止NVIC中VC中断
 void VC_DisableNvic(IRQn_Type enIrqn);
-//VCͨ��1�жϽ���
+//VC通道1中断禁用
 void VC1_DisableIrq(void);
-//VCͨ��2�жϽ���
+//VC通道2中断禁用
 void VC2_DisableIrq(void);
-//VCͨ��1�ж�ʹ��
+//VC通道1中断使能
 void VC1_EnableIrq(uint8_t intPriority);
-//VCͨ��2�ж�ʹ��
+//VC通道2中断使能
 void VC2_EnableIrq(uint8_t intPriority);
-//����VC1�жϴ�����ʽ
+//配置VC1中断触发方式
 void VC1_ITConfig(uint16_t VC_IT, FunctionalState NewState);
-//����VC2�жϴ�����ʽ
+//配置VC2中断触发方式
 void VC2_ITConfig(uint16_t VC_IT, FunctionalState NewState);
 
-//���VC1�жϱ�־
+//清除VC1中断标志
 void VC1_ClearIrq(void);
-//���VC2�жϱ�־
+//清除VC2中断标志
 void VC2_ClearIrq(void);
 
-//��ȡVC1״̬
+//获取VC1状态
 FlagStatus VC1_GetFlagStatus(uint16_t VC_FLAG);
-//��ȡVC2״̬
+//获取VC2状态
 FlagStatus VC2_GetFlagStatus(uint16_t VC_FLAG);
 
-//��ȡVC1��ʹ�ܿ���״̬
+//获取VC1的使能控制状态
 FlagStatus VC1_GetEnableStatus(void);
-//��ȡVC2��ʹ�ܿ���״̬
+//获取VC2的使能控制状态
 FlagStatus VC2_GetEnableStatus(void);
 //@} // VcGroup
 

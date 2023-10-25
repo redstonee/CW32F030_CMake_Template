@@ -13,6 +13,13 @@ enable_language(CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Use .axf as the extension to enable it to be flashed with Keil
+set(OUTPUT_EXE_NAME ${CMAKE_PROJECT_NAME}.axf)
+
+# Set the source directories
+set(HW_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/Hardware/src)
+set(USER_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
+
 # Set the include directories
 include_directories(${CMAKE_CURRENT_LIST_DIR}/Hardware/inc)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/include)
@@ -20,12 +27,10 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/INT)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/CMSIS/Core/Include)
 include_directories(${CMAKE_CURRENT_LIST_DIR}/Device)
 
-# Set the source directories
-set(HW_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/Hardware/src)
-set(USER_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/src)
 
 
 # Add source files
+
 set (HW_SRCS
         ${HW_SRC_DIR}/cw32f030_adc.c
         ${HW_SRC_DIR}/cw32f030_atim.c
@@ -68,7 +73,7 @@ set(INTERRUPTS_SRC
         ${CMAKE_CURRENT_LIST_DIR}/INT/interrupts_cw32f030.c
 )
 
-add_executable(${CMAKE_PROJECT_NAME}.elf 
+add_executable(${OUTPUT_EXE_NAME}
         ${HW_SRCS}
         ${USER_SRCS}
         ${STARTUP_SRC}
@@ -83,22 +88,22 @@ add_compile_definitions(
 set(LD_SCRIPT_PATH ${CMAKE_CURRENT_LIST_DIR}/ldscript.ld)
 get_filename_component(LD_SCRIPT_PATH_ABS ${LD_SCRIPT_PATH} ABSOLUTE)
 
-set_target_properties(${CMAKE_PROJECT_NAME}.elf PROPERTIES
+set_target_properties(${OUTPUT_EXE_NAME} PROPERTIES
         CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
         LINK_DEPENDS ${LD_SCRIPT_PATH_ABS}
         LINK_FLAGS "-T \"${LD_SCRIPT_PATH_ABS}\""
 )
 
-add_custom_target(
-        createBinFile ALL
-        ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-objcopy -Obinary
-        "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf"
-        "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
-        DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf
-)
+# add_custom_target(
+#         createBinFile ALL
+#         ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-objcopy -Obinary
+#         "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf"
+#         "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
+#         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf
+# )
 
 add_custom_target(
         showSize ALL
-        ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-size "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf"
-        DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf)
+        ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-size "${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME}"
+        DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME})

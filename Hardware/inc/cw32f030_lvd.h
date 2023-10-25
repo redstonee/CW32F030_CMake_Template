@@ -10,18 +10,18 @@
  */
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 
@@ -177,17 +177,17 @@ extern "C"
 
 /**
  ******************************************************************************
- ** @brief LVD����
+ ** @brief LVD配置
  ** \note
  ******************************************************************************/
 typedef struct
 {
-    uint32_t	LVD_Action;       // LVD��������
-    uint32_t	LVD_Source;       // LVD�����ѹԴ
-    uint32_t	LVD_Threshold;    // LVD��ֵ��ѹ
-    uint32_t	LVD_FilterEn;       // �Ƿ�ʹ������˲�
-    uint32_t	LVD_FilterClk;    // �˲�ʱ��Դ
-    uint32_t	LVD_FilterTime;   // ����˲�ʱ��
+    uint32_t	LVD_Action;       // LVD触发动作
+    uint32_t	LVD_Source;       // LVD输入电压源
+    uint32_t	LVD_Threshold;    // LVD阈值电压
+    uint32_t	LVD_FilterEn;       // 是否使用输出滤波
+    uint32_t	LVD_FilterClk;    // 滤波时钟源
+    uint32_t	LVD_FilterTime;   // 输出滤波时间
 }LVD_InitTypeDef;
 
 /******************************************************************************
@@ -206,34 +206,34 @@ typedef struct
 /******************************************************************************
  * Global function prototypes (definition in C source)
  ******************************************************************************/
-//ʹ��NVIC��LVD�ж�
+//使能NVIC中LVD中断
 void LVD_EnableNvic(uint8_t intPriority);
-//��ֹNVIC��LVD�ж�
+//禁止NVIC中LVD中断
 void LVD_DisableNvic(void);
-//����LVD�ж�/ϵͳ��λ������ʽ
+//配置LVD中断/系统复位触发方式
 void LVD_TrigConfig(uint16_t LVD_TRIG, FunctionalState NewState);
-//ʹ��LVD�ж�
+//使能LVD中断
 void LVD_EnableIrq(uint8_t intPriority);
-//��ֹLVD�ж�
+//禁止LVD中断
 void LVD_DisableIrq(void);
 
-//���LVD�жϱ�־
+//清除LVD中断标志
 void LVD_ClearIrq(void);
-//��ȡLVD�жϱ�־
+//获取LVD中断标志
 boolean_t LVD_GetIrqStatus(void);
-//��ȡLVDָ����״̬λ
+//获取LVD指定的状态位
 FlagStatus LVD_GetFlagStatus(uint16_t LVD_FLAG);
-//��ȡFilter���
+//获取Filter结果
 boolean_t LVD_GetFilterResult(void);
 
-//LVD��ʼ��
+//LVD初始化
 void LVD_Init(LVD_InitTypeDef* LVD_InitStruct);
-//LVDȥ��ʼ��
+//LVD去初始化
 void LVD_DeInit(void);
 
-//ʹ��LVD
+//使能LVD
 void LVD_Enable(void);
-//ֹͣLVD
+//停止LVD
 void LVD_Disable(void);
 
 //@} // LvdGroup

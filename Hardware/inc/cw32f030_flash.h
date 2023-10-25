@@ -11,18 +11,18 @@
 
 /*******************************************************************************
 *
-* �������ɺ�������Ϣ
-* �人оԴ�뵼�����޹�˾������ʹ�����б�̴���ʾ���ķ�ר���İ�Ȩ���ɣ��������ɴ�
-* ���ɸ��������ض���Ҫ�����Ƶ����ƹ��ܡ����ݲ��ܱ��ų����κη�����֤���人оԴ��
-* �������޹�˾������򿪷��̺͹�Ӧ�̶Գ������֧�֣�����У����ṩ�κ���ʾ��
-* ���ı�֤�������������������ڰ������й������ԡ�������ĳ���ض���;�ͷ���Ȩ�ı�֤
-* ��������
-* ���ۺ������Σ��人оԴ�뵼�����޹�˾������򿪷��̻�Ӧ�̾��������и����
-* ��ʹ����֪�䷢���Ŀ�����ʱ��Ҳ����ˣ����ݵĶ�ʧ���𻵣�ֱ�ӵġ��ر�ġ�������
-* ���ӵ��𺦣����κκ���Ծ����𺦣�������ҵ�����롢������Ԥ�ڿɽ�ʡ����
-* ��ʧ��
-* ĳЩ˾��Ͻ����������ֱ�ӵġ������Ļ����Ե������κε��ų������ƣ����ĳЩ��
-* ȫ�������ų������ƿ��ܲ�������������
+* 代码许可和免责信息
+* 武汉芯源半导体有限公司授予您使用所有编程代码示例的非专属的版权许可，您可以由此
+* 生成根据您的特定需要而定制的相似功能。根据不能被排除的任何法定保证，武汉芯源半
+* 导体有限公司及其程序开发商和供应商对程序或技术支持（如果有）不提供任何明示或暗
+* 含的保证或条件，包括但不限于暗含的有关适销性、适用于某种特定用途和非侵权的保证
+* 或条件。
+* 无论何种情形，武汉芯源半导体有限公司及其程序开发商或供应商均不对下列各项负责，
+* 即使被告知其发生的可能性时，也是如此：数据的丢失或损坏；直接的、特别的、附带的
+* 或间接的损害，或任何后果性经济损害；或利润、业务、收入、商誉或预期可节省金额的
+* 损失。
+* 某些司法辖区不允许对直接的、附带的或后果性的损害有任何的排除或限制，因此某些或
+* 全部上述排除或限制可能并不适用于您。
 *
 *******************************************************************************/
 
@@ -45,7 +45,7 @@
 /*****************************************************************************/
 //============================================================
 
-/** @defgroup FLASH״̬ 
+/** @defgroup FLASH状态 
   * @{
   */ 
 #define FLASH_FLAG_OK                  (0UL)
@@ -55,7 +55,7 @@
 #define FLASH_FLAG_PCERR               (bv0)  /*!< FLASH PC error flag */
 #define FLASH_ERROR_ADDR               0x80
 
-/** @defgroup ������������ʱ 
+/** @defgroup 读访问周期延时 
   * @{
   */ 
 #define FLASH_Latency_1                ((uint32_t)0x00000000)  /*!< FLASH One Latency cycle */
@@ -65,7 +65,7 @@
                                    ((LATENCY) == FLASH_Latency_2) || \
                                    ((LATENCY) == FLASH_Latency_3)) 
 
-/** @defgroup FETCH���� 
+/** @defgroup FETCH开关 
   * @{
   */
 #define FLASH_Prefetch_Enable    ((uint32_t)0x00000008)  /*!< FLASH Prefetch Enable */
@@ -73,7 +73,7 @@
 #define IS_FLASH_PREFETCH_STATE(STATE) (((STATE) == FLASH_Prefetch_Enable) || \
                                               ((STATE) == FLASH_Prefetch_Disable)) 
 
-/** @defgroup CACHE���� 
+/** @defgroup CACHE开关 
   * @{
   */
 #define FLASH_Cache_Enable    ((uint32_t)0x00000010)  /*!< FLASH Buffer Enable */
@@ -81,7 +81,7 @@
 #define IS_FLASH_CACHE_STATE(STATE) (((STATE) == FLASH_Cache_Enable) || \
                                               ((STATE) == FLASH_Cache_Disable)) 
 
-/** @defgroup �������ȼ� 
+/** @defgroup 读保护等级 
   * @{
   */
 #define FLASH_RDLEVEL0  ((uint16_t)0x00)    
@@ -93,7 +93,7 @@
                                   ((LEVEL) == FLASH_RDLEVEL2) || \
                                   ((LEVEL) == FLASH_RDLEVEL3))
 
-/** @defgroup �жϱ�־λ 
+/** @defgroup 中断标志位 
   * @{
   */
 #define FLASH_IT_PROG                     (bv4)
@@ -104,7 +104,7 @@
                                           ((IT) == FLASH_IT_PAGELOCK) || \
                                           ((IT) == FLASH_IT_PC)) 
 
- /** @defgroup FLASHҳ 
+ /** @defgroup FLASH页 
   * @{
   */ 
 #define FLASH_WRProt_AllPages            ((uint32_t)0x0000FFFF) /*!< Write protection of all Pages */
@@ -112,47 +112,47 @@
 #define IS_FLASH_ADDRESS(ADDRESS)        (((ADDRESS) >= 0x00000000) && ((ADDRESS) < 0x00010000))
 
 //============================================================ 
-//����FLASH����������
+//设置FLASH读访问周期
 void FLASH_SetLatency( uint32_t FLASH_Latency );
-//����Ԥȡʹ��
+//设置预取使能
 void FLASH_PrefetchCmd(uint32_t FLASH_Prefetch);
-//����BUFFERʹ��
+//设置BUFFER使能
 void FLASH_CacheCmd(uint32_t FLASH_Buffer);
-//��ȡFLASH��Fetch״̬
+//获取FLASH的Fetch状态
 FlagStatus FLASH_GetPrefetchStatus(void);
-//��ȡFLASH��Cache״̬
+//获取FLASH的Cache状态
 FlagStatus FLASH_GetCacheStatus(void);
-//��ȡFLASH�Ķ������ȼ�
+//获取FLASH的读保护等级
 uint8_t FLASH_GetReadOutLevel( void );
-//����FLASH�Ķ������ȼ�
+//设置FLASH的读保护等级
 void FLASH_SetReadOutLevel( uint16_t RdLevel );
-//����FLASH����ҳ��
+//解锁FLASH所有页面
 void FLASH_UnlockAllPages(void);
-//����FLASH����ҳ��
+//锁定FLASH所有页面
 void FLASH_LockAllPages( void );
-//����FLASHָ��ҳ�棺����ҳ��Ž�����0~127
+//解锁FLASH指定页面：按照页面号解锁，0~127
 uint8_t FLASH_UnlockPage( uint8_t Page_Number );
-//����FLASHָ��ҳ�棺������ʼ����ֹ��ַ����
+//解锁FLASH指定页面：按照起始和终止地址解锁
 uint8_t FLASH_UnlockPages( uint32_t StartAddr , uint32_t EndAddr );
-//����FLASHָ��ҳ�棺����ҳ��Ų�����0~127
+//擦除FLASH指定页面：按照页面号擦除，0~127
 uint8_t FLASH_ErasePage( uint8_t Page_Number );
-//����FLASHָ��ҳ�棺������ʼ����ֹ��ַ����
+//擦除FLASH指定页面：按照起始和终止地址擦除
 uint8_t FLASH_ErasePages( uint32_t StartAddr , uint32_t EndAddr );
-//ָ����ַ��ʼдһ�����ȵ����ݣ������ֽ�д
+//指定地址开始写一定长度的数据，按照字节写
 uint8_t FLASH_WirteBytes( uint32_t WriteAddr, uint8_t *pWrBuf , uint16_t WrByteCnt );
-//��һ��ָ����ַд��һ���ֳ�������
+//向一个指定地址写入一个字长的数据
 uint8_t FLASH_WriteWord(uint32_t Address, uint32_t Data);
-//����FLASHָ��ҳ�棺����ҳ���������0~127
+//锁定FLASH指定页面：按照页面号锁定，0~127
 uint8_t FLASH_LockPage( uint8_t Page_Number );
-//����FLASHָ��ҳ�棺������ʼ����ֹ��ַ����
+//锁定FLASH指定页面：按照起始和终止地址锁定
 uint8_t FLASH_LockPages( uint32_t StartAddr , uint32_t EndAddr );
-//FLASHָ���ж�ʹ������
+//FLASH指定中断使能配置
 void FLASH_ITConfig(uint32_t FLASH_IT, FunctionalState NewState);
-//��ȡָ��FLASH�жϱ�־λ
+//获取指定FLASH中断标志位
 ITStatus FLASH_GetITStatus(uint32_t FLASH_IT);
-//���ָ��FLASH�жϱ�־λ
+//清除指定FLASH中断标志位
 void FLASH_ClearITPendingBit(uint32_t FLASH_IT);
-//��ȡFLASHģ�鵱ǰ״̬//
+//获取FLASH模块当前状态//
 uint32_t FLASH_GetStatus(void);
 
 //============================================================

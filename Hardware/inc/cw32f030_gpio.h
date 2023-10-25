@@ -84,7 +84,7 @@ extern "C"
 #define GPIO_PIN_All                       ((uint16_t)0xFFFF)   /* All pins selected    */
 
 //============================================================
-//端口滤波定义
+//绔彛婊ゆ尝瀹氫箟
 #define GPIO_FLTCLK_HCLK2                  (((uint32_t)0) << 16)
 #define GPIO_FLTCLK_HCLK4                  (((uint32_t)1) << 16)
 #define GPIO_FLTCLK_HCLK8                  (((uint32_t)2) << 16)
@@ -94,7 +94,7 @@ extern "C"
 #define GPIO_FLTCLK_RC10K                  (((uint32_t)6) << 16)
 
 //============================================================
-//清除CW_GPIO中断标志
+//娓呴櫎CW_GPIO涓柇鏍囧織
 #define GPIOA_INTFLAG_CLR(Mask)            ((CW_GPIOA->ICR) = (~((uint32_t)(Mask))))
 #define GPIOB_INTFLAG_CLR(Mask)            ((CW_GPIOB->ICR) = (~((uint32_t)(Mask))))
 #define GPIOC_INTFLAG_CLR(Mask)            ((CW_GPIOC->ICR) = (~((uint32_t)(Mask))))

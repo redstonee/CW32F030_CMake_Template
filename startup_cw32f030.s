@@ -114,51 +114,51 @@ g_pfnVectors:
     .word Reset_Handler
     .word NMI_Handler
     .word HardFault_Handler
-    .word MemManage_Handler
-    .word BusFault_Handler
-    .word UsageFault_Handler
+    .word 0
+    .word 0
+    .word 0
     .word 0
     .word 0
     .word 0
     .word 0
     .word SVC_Handler
-    .word DebugMon_Handler
+    .word 0
     .word 0
     .word PendSV_Handler
     .word SysTick_Handler
     
-    .word IWDG_IRQHandler /* Independent Watchdog */
-    .word PVD_IRQHandler /* PVD through EXTI Line detect */
-    .word 0
-    .word FLASH_IRQHandler /* FLASH */
-    .word RCC_IRQHandler /* RCC */
-    .word EXTI0_1_IRQHandler /* EXTI Line 0 and 1 */
-    .word EXTI2_3_IRQHandler /* EXTI Line 2 and 3 */
-    .word EXTI4_15_IRQHandler /* EXTI Line 4 to 15 */
-    .word 0
-    .word 0
-    .word 0
-    .word 0
-    .word ADC1_IRQHandler /* ADC1 */
-    .word TIM1_BRK_UP_TRG_COM_IRQHandler /* TIM1 Break, Update, Trigger and Commutation */
-    .word TIM1_CC_IRQHandler /* TIM1 Capture Compare */
-    .word 0
-    .word TIM3_IRQHandler /* TIM3 */
-    .word 0
-    .word 0
-    .word TIM14_IRQHandler /* TIM14 */
-    .word 0
-    .word 0
-    .word 0
-    .word I2C1_IRQHandler /* I2C1 */
-    .word SPI1_IRQHandler /* SPI1 */
-    .word 0
-    .word USART1_IRQHandler /* USART1 */
-    .word USART2_IRQHandler /* USART2 */
-    .word 0
-    .word 0
-    .word 0
-    
+    .word WDT_IRQHandler /*Watchdog Timer */
+    .word LVD_IRQHandler /*Low Voltage Detect */
+    .word RTC_IRQHandler /*Real Time Clock */
+    .word FLASHRAM_IRQHandler /*Flash Memory */
+    .word RTC_IRQHandler /*Real Time Clock */
+    .word GPIOA_IRQHandler /*GPIOA */
+    .word GPIOB_IRQHandler /*GPIOB */
+    .word GPIOC_IRQHandler /*GPIOC */
+    .word GPIOF_IRQHandler /*GPIOF */
+    .word DMACH1_IRQHandler /*DMA Channel 1 */
+    .word DMACH23_IRQHandler /*DMA Channel 2 and 3 */
+    .word DMACH45_IRQHandler /*DMA Channel 4 and 5 */
+    .word ADC_IRQHandler /*ADC */
+    .word ATIM_IRQHandler /*Advanced Timer */
+    .word VC1_IRQHandler /*Voltage Comparator 1 */
+    .word VC2_IRQHandler /*Voltage Comparator 2 */
+    .word GTIM1_IRQHandler /*General Timer 1 */
+    .word GTIM2_IRQHandler /*General Timer 2 */
+    .word GTIM3_IRQHandler /*General Timer 3 */
+    .word GTIM4_IRQHandler /*General Timer 4 */
+    .word BTIM1_IRQHandler /*Basic Timer */
+    .word BTIM2_IRQHandler /*Basic Timer */
+    .word BTIM3_IRQHandler /*Basic Timer */
+    .word I2C1_IRQHandler /*I2C1 */
+    .word I2C2_IRQHandler /*I2C2 */
+    .word SPI1_IRQHandler /*SPI1 */
+    .word SPI2_IRQHandler /*SPI2 */
+    .word UART1_IRQHandler /*UART1 */
+    .word UART2_IRQHandler /*UART2 */
+    .word UART3_IRQHandler /*UART3 */
+    .word AWT_IRQHandler /*Auto Wakeup Timer */
+    .word FAULT_IRQHandler /*Fault Handler */
 
     .weak NMI_Handler
     .thumb_set NMI_Handler,Default_Handler
@@ -166,20 +166,8 @@ g_pfnVectors:
     .weak HardFault_Handler
     .thumb_set HardFault_Handler,Default_Handler
 
-    .weak MemManage_Handler
-    .thumb_set MemManage_Handler,Default_Handler
-
-    .weak BusFault_Handler
-    .thumb_set BusFault_Handler,Default_Handler
-
-    .weak UsageFault_Handler
-    .thumb_set UsageFault_Handler,Default_Handler
-
     .weak SVC_Handler
     .thumb_set SVC_Handler,Default_Handler
-
-    .weak DebugMon_Handler
-    .thumb_set DebugMon_Handler,Default_Handler
 
     .weak PendSV_Handler
     .thumb_set PendSV_Handler,Default_Handler
@@ -187,53 +175,98 @@ g_pfnVectors:
     .weak SysTick_Handler
     .thumb_set SysTick_Handler,Default_Handler
 
-    .weak IWDG_IRQHandler
-    .thumb_set IWDG_IRQHandler,Default_Handler
+    .weak WDT_IRQHandler
+    .thumb_set WDT_IRQHandler,Default_Handler
 
-    .weak PVD_IRQHandler
-    .thumb_set PVD_IRQHandler,Default_Handler
+    .weak LVD_IRQHandler
+    .thumb_set LVD_IRQHandler,Default_Handler
 
-    .weak FLASH_IRQHandler
-    .thumb_set FLASH_IRQHandler,Default_Handler
+    .weak RTC_IRQHandler
+    .thumb_set RTC_IRQHandler,Default_Handler
 
-    .weak RCC_IRQHandler
-    .thumb_set RCC_IRQHandler,Default_Handler
+    .weak FLASHRAM_IRQHandler
+    .thumb_set FLASHRAM_IRQHandler,Default_Handler
 
-    .weak EXTI0_1_IRQHandler
-    .thumb_set EXTI0_1_IRQHandler,Default_Handler
+    .weak RTC_IRQHandler
+    .thumb_set RTC_IRQHandler,Default_Handler
 
-    .weak EXTI2_3_IRQHandler
-    .thumb_set EXTI2_3_IRQHandler,Default_Handler
+    .weak GPIOA_IRQHandler
+    .thumb_set GPIOA_IRQHandler,Default_Handler
 
-    .weak EXTI4_15_IRQHandler
-    .thumb_set EXTI4_15_IRQHandler,Default_Handler
+    .weak GPIOB_IRQHandler
+    .thumb_set GPIOB_IRQHandler,Default_Handler
 
-    .weak ADC1_IRQHandler
-    .thumb_set ADC1_IRQHandler,Default_Handler
+    .weak GPIOC_IRQHandler
+    .thumb_set GPIOC_IRQHandler,Default_Handler
 
-    .weak TIM1_BRK_UP_TRG_COM_IRQHandler
-    .thumb_set TIM1_BRK_UP_TRG_COM_IRQHandler,Default_Handler
+    .weak GPIOF_IRQHandler
+    .thumb_set GPIOF_IRQHandler,Default_Handler
 
-    .weak TIM1_CC_IRQHandler
-    .thumb_set TIM1_CC_IRQHandler,Default_Handler
+    .weak DMACH1_IRQHandler
+    .thumb_set DMACH1_IRQHandler,Default_Handler
 
-    .weak TIM3_IRQHandler
-    .thumb_set TIM3_IRQHandler,Default_Handler
+    .weak DMACH23_IRQHandler
+    .thumb_set DMACH23_IRQHandler,Default_Handler
 
-    .weak TIM14_IRQHandler
-    .thumb_set TIM14_IRQHandler,Default_Handler
+    .weak DMACH45_IRQHandler
+    .thumb_set DMACH45_IRQHandler,Default_Handler
+
+    .weak ADC_IRQHandler
+    .thumb_set ADC_IRQHandler,Default_Handler
+
+    .weak ATIM_IRQHandler
+    .thumb_set ATIM_IRQHandler,Default_Handler
+
+    .weak VC1_IRQHandler
+    .thumb_set VC1_IRQHandler,Default_Handler
+
+    .weak VC2_IRQHandler
+    .thumb_set VC2_IRQHandler,Default_Handler
+
+    .weak GTIM1_IRQHandler
+    .thumb_set GTIM1_IRQHandler,Default_Handler
+
+    .weak GTIM2_IRQHandler
+    .thumb_set GTIM2_IRQHandler,Default_Handler
+
+    .weak GTIM3_IRQHandler
+    .thumb_set GTIM3_IRQHandler,Default_Handler
+
+    .weak GTIM4_IRQHandler
+    .thumb_set GTIM4_IRQHandler,Default_Handler
+
+    .weak BTIM1_IRQHandler
+    .thumb_set BTIM1_IRQHandler,Default_Handler
+
+    .weak BTIM2_IRQHandler
+    .thumb_set BTIM2_IRQHandler,Default_Handler
+
+    .weak BTIM3_IRQHandler
+    .thumb_set BTIM3_IRQHandler,Default_Handler
 
     .weak I2C1_IRQHandler
     .thumb_set I2C1_IRQHandler,Default_Handler
 
+    .weak I2C2_IRQHandler
+    .thumb_set I2C2_IRQHandler,Default_Handler
+
     .weak SPI1_IRQHandler
     .thumb_set SPI1_IRQHandler,Default_Handler
 
-    .weak USART1_IRQHandler
-    .thumb_set USART1_IRQHandler,Default_Handler
+    .weak SPI2_IRQHandler
+    .thumb_set SPI2_IRQHandler,Default_Handler
 
-    .weak USART2_IRQHandler
-    .thumb_set USART2_IRQHandler,Default_Handler
+    .weak UART1_IRQHandler
+    .thumb_set UART1_IRQHandler,Default_Handler
 
+    .weak UART2_IRQHandler
+    .thumb_set UART2_IRQHandler,Default_Handler
 
+    .weak UART3_IRQHandler
+    .thumb_set UART3_IRQHandler,Default_Handler
 
+    .weak AWT_IRQHandler
+    .thumb_set AWT_IRQHandler,Default_Handler
+
+    .weak FAULT_IRQHandler
+    .thumb_set FAULT_IRQHandler,Default_Handler
