@@ -345,7 +345,7 @@ FlagStatus BTIM_GetITStatus(BTIM_TypeDef* BTIMx, uint16_t BTIM_FLAG)
 //                    
 // 返回值： 预分频器当前正在使用的分频系数
 *******************************************************************************/
-#pragma arm section code = "RAMCODE"
+__attribute__((section("RAMCODE")))
 void BTIM_ClearITPendingBit(BTIM_TypeDef* BTIMx, uint16_t BTIM_FLAG)
 {
   assert_param(IS_BTIM_ALL_PERIPH(BTIMx));
@@ -353,4 +353,3 @@ void BTIM_ClearITPendingBit(BTIM_TypeDef* BTIMx, uint16_t BTIM_FLAG)
 
   REGBITS_CLR(BTIMx->ICR, BTIM_FLAG);
 }
-#pragma arm section

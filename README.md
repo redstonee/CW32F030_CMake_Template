@@ -5,11 +5,10 @@ This project contains the Standard library for CW32F030 from Creative Wisdom (or
 
 I know nothing about Assembly, so I transplanted the startup file and the link script file with the reference of those for STM32, so there might be some bug which I haven't found yet.  
 
-It's really a pity that WHXY doesn't provide an ISP tool independent from Keil or IAR, so you probably need to flash the chip with Keil or IAR now. Following is a method to flash the chip with Keil:
-* Ensure the output executable file has the extension `.axf`, which is set in `CMakeLists.txt`, because Keil can only flash `.axf` files.  
-*However, `.axf` files are actually same as `.elf` files, so the output file can be renamed to `.axf` directly.*
-* Open a Keil project whose target device is CW32F030.
-* Go to `Output` Tab in `Options for Target`.
-* Select the `build` folder of this project with the button "Select Folder for Objects", and set the `Name of Executable` to the output executable filename.
-* Click `OK` to close the dialog.
-* Click `Download` to flash the chip.
+The chip can be flashed using pyOCD, and debugging is also supported(even though idk how to implement).
+
+* Make sure pyOCD is installed, which can be done by `pip install pyocd`.
+* Copy everything *under* [Pack](./Pack) folder to the pack folder of pyOCD, which is `%appdata%\..\Local\cmsis-pack-manager\cmsis-pack-manager\` in Windows.
+* Merge the target config from [index_cw32.json](./index_cw32.json) into the target index file of pyOCD, which is `%appdata%\..\Local\cmsis-pack-manager\cmsis-pack-manager\index.json` in Windows.
+* Run `pyocd pack install cw32f030` to update the pack index.
+* Connect the board and run `pyocd erase --chip --target cw32f030c8` in the project folder to see if it works properly.

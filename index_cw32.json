@@ -1,0 +1,74 @@
+{
+    "CW32F030": {
+        "name": "CW32F030",
+        "memories": {
+            "Main_Flash": {
+                "p_name": null,
+                "access": {
+                    "read": true,
+                    "write": false,
+                    "execute": true,
+                    "peripheral": false,
+                    "secure": false,
+                    "non_secure": false,
+                    "non_secure_callable": false
+                },
+                "start": 134217728,
+                "size": 65536,
+                "startup": true,
+                "default": true
+            },
+            "SRAM": {
+                "p_name": null,
+                "access": {
+                    "read": true,
+                    "write": true,
+                    "execute": true,
+                    "peripheral": false,
+                    "secure": false,
+                    "non_secure": false,
+                    "non_secure_callable": false
+                },
+                "start": 8589934592,
+                "size": 8192,
+                "startup": false,
+                "default": true
+            }
+        },
+        "algorithms": [
+            {
+                "file_name": "Flash/FlashCW32F030.FLM",
+                "start": 134217728,
+                "size": 65536,
+                "default": true,
+                "ram_start": 536870912,
+                "ram_size": 8192,
+                "style": "Keil"
+            }
+        ],
+        "processors": [
+            {
+                "core": "CortexM0Plus",
+                "fpu": "None",
+                "mpu": "Present",
+                "ap": 0,
+                "dp": 0,
+                "apid": null,
+                "address": null,
+                "svd": "SVD/CW32F030.svd",
+                "name": null,
+                "unit": 0,
+                "default_reset_sequence": null
+            }
+        ],
+        "from_pack": {
+            "vendor": "WHXY",
+            "pack": "CW32F030_DFP",
+            "version": "1.0.4",
+            "url": "http://www.keil.com/pack/"
+        },
+        "vendor": "WHXY",
+        "family": "CW32F0 Series",
+        "sub_family": "CW32F030"
+    }
+}

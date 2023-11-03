@@ -13,8 +13,7 @@ enable_language(CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# Use .axf as the extension to enable it to be flashed with Keil
-set(OUTPUT_EXE_NAME ${CMAKE_PROJECT_NAME}.axf)
+set(OUTPUT_EXE_NAME ${CMAKE_PROJECT_NAME}.elf)
 
 # Set the source directories
 set(HW_SRC_DIR ${CMAKE_CURRENT_LIST_DIR}/Hardware/src)
@@ -95,15 +94,22 @@ set_target_properties(${OUTPUT_EXE_NAME} PROPERTIES
         LINK_FLAGS "-T \"${LD_SCRIPT_PATH_ABS}\""
 )
 
-# add_custom_target(
-#         createBinFile ALL
-#         ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-objcopy -Obinary
-#         "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf"
-#         "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin"
-#         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_PROJECT_NAME}.elf
-# )
 
 add_custom_target(
         showSize ALL
         ${TOOLCHAIN_PREFIX}/bin/${TOOLCHAIN}-size "${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME}"
         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME})
+
+find_program(PYOCD_FOUND pyocd)
+
+if(PYOCD_FOUND)
+        add_custom_target(BuildAndFlash COMMAND DEPENDS flash-cmd)
+        add_custom_command(
+                USES_TERMINAL 
+                OUTPUT flash-cmd
+                COMMAND pyocd load ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME} -t cw32f030c8
+                DEPENDS showSize
+        )
+else()
+        message(WARNING "pyocd not found, flashing will not be available")
+endif()
