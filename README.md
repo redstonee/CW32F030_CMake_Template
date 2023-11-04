@@ -1,7 +1,7 @@
 # CW32F030_CMake_Template
 A template project for CW32F030 with CMake  
 
-This project contains the Standard library for CW32F030 from Creative Wisdom (or WHXY), and a simple blinky example.
+This project contains the Standard library for CW32F030 from Creative Wisdom (or WHXY), and a simple blinky/UART printing example.
 
 I know nothing about Assembly, so I transplanted the startup file and the link script file with the reference of those for STM32, so there might be some bug which I haven't found yet.  
 

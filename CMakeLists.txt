@@ -107,7 +107,7 @@ if(PYOCD_FOUND)
         add_custom_command(
                 USES_TERMINAL 
                 OUTPUT flash-cmd
-                COMMAND pyocd load ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME} -t cw32f030c8
+                COMMAND pyocd load ${CMAKE_CURRENT_BINARY_DIR}/${OUTPUT_EXE_NAME} -t cw32f030c8 # Modify this to match your target
                 DEPENDS showSize
         )
 else()
